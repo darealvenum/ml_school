@@ -4,17 +4,18 @@ import numpy as np
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import MinMaxScaler
 
-df = pd.read_csv("data/kmeans.csv") 
-num_clusters = int(input("hoeveel clusters? ")) # ik denk dat er 3 clusters komen
+df = pd.read_csv("data/kmeans.csv")
+# ik denk dat er 3 clusters komen
+num_clusters = int(input("hoeveel clusters? "))
 
 # ik gok 3 clusters
 # plt.scatter(df["x"], df["y"])
 # plt.show()
 
 km = KMeans(n_clusters=num_clusters)
-y_predicted = km.fit_predict(df[["x", "y"]]) # zal een model trainen waarbij elk punt in df een centroid krijgt
+# zal een model trainen waarbij elk punt in df een centroid krijgt
+y_predicted = km.fit_predict(df[["x", "y"]])
 df["cluster"] = y_predicted
-
 
 
 # krijgt de coordinaten van de centroids

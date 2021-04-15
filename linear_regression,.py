@@ -9,6 +9,7 @@ y = train_data['price']
 
 plt.scatter(X, y)
 
+# train data, reshape X naar dimensie -1,1 omdat dit moet voor matrices met 1 demensie
 linear_regression = linear_model.LinearRegression()
 linear_regression.fit(X.values.reshape(-1, 1), y)
 
