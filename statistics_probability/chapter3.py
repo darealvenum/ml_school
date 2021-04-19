@@ -7,7 +7,7 @@ class C3:
         return sum(self.data) // self._len
 
     # Math: \sigma = \sqrt{\sigma^2}
-    # Math: \sigma^2 = \frac{\sum_{i=1}^{n} x_i - \mu}{n}
+    # Math: \sigma^2 = \frac{\sum_{i=1}^{n} (x_i - \mu)^2}{n}
     def variance(self):
         sd = 0
         mean = self.mean()
